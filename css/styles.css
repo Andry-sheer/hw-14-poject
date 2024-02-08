@@ -57,26 +57,30 @@ body {
   background: url('/images/BG.png')  center/cover no-repeat;
   height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
 .BG::before {
   content: '';
-  background: #000000;
-  opacity: .4;
+  background: #00000060;
   position: absolute;
-  left: 0;
+  z-index: 2;
   top: 0;
-  bottom: 0;
+  left: 0;
   right: 0;
+  bottom: 0;
 }
 
 .main-side {
   max-width: 500px;
-  background: rgba(233, 233, 233, .6);
+  background: rgba(233, 233, 233, 0.404);
+  backdrop-filter: blur(5px);
   margin-left: auto;
-  overflow: scroll;
+  overflow: auto;
   padding: 60px 0 60px 0;
-  height: 100vh;
+  height: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 
@@ -101,7 +105,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid #153416;
+  border: 1px solid #d49c00;
   border-radius: 30px;
   text-align: center;
   position: relative;
@@ -121,7 +125,7 @@ body {
   content: '';
   width: 168px;
   height: 32px;
-  background: #153416;
+  background: #883769;
   border-radius: 30px;
   position: absolute;
   left: 1px;
@@ -176,12 +180,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 120px;
-
 }
 
+
+
+
+/************ BUTTO-N + ADRES-S + SVG-G *****************************************************************************************/
 .butt {
   border-radius: 30px;
-  background: #153416;
+  background: #883769;
   color: #ffffff;
   display: flex;
   padding: 15px 153px;
@@ -193,11 +200,11 @@ body {
 }
 
 .butt:active {
-  background-color: green;
+  background-color: #83185a;
 }
 
 .adr_span {
-  color: #153416;
+  color: #e6a800;
   position: relative;
   display: flex;
   justify-content: center;
@@ -220,8 +227,11 @@ body {
   margin-bottom: 200px;
 }
 
+.list-social li a {
+  display: block;
+}
+
 .svg {
   width: 24px;
   height: 24px;
-  fill: #153416;
 }
